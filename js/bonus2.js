@@ -2,21 +2,26 @@
 // Chiedere all'utente i km che vuole percorrere
 let km = parseInt(prompt("Quanti Kilometri vuoi percorrere?"));
 
-if(km != '' && isNaN(km)) {
+while ( km != "" && isNaN(km)) {
     alert("Devi inserire un numero! Il campo non può essere vuoto o contenere caratteri!!");
     km = parseInt(prompt("Quanti Kilometri vuoi percorrere?"));
-}else if (km <= 10) { 
+}
+
+while( km <= 10) {
     alert("Minimo Kilometri inseribili 11");
     km = parseInt(prompt("Quanti Kilometri vuoi percorrere?"));
-}else if (km > 3000) {
+}
+
+while( km > 3000) {
     alert("Massimo Kilometri inseribili è 3000");
     km = parseInt(prompt("Quanti Kilometri vuoi percorrere?"));
 }
 
+
 // Chiedere all'utente l'età
 let eta = parseInt(prompt("Quanti anni hai?"));
 
-if(eta <= 6) {
+while( eta <= 6) {
     alert("Sino a 6 anni non è necessario il biglietto!!");
     eta = parseInt(prompt("Quanti anni hai?"));
 }
