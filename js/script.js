@@ -1,7 +1,7 @@
 
 
 // Chiedere all'utente i km che vuole percorrere
-let km = parseInt(prompt("Quanti km vuoi percorerre?"));
+let km = parseInt(prompt("Quanti kilometri vuoi percorerre?"));
 
 // Chiedere all'utente l'età
 let eta = parseInt(prompt("Quanti anni hai?"));
@@ -19,7 +19,13 @@ if( eta < 18 ) {
     prezzo;
 }
 
+// Manipolazione del DOM inserire i dati in HTML
+const kmUtente = document.getElementById("kmUtente");
+kmUtente.innerHTML = `Km: ${km}`;
+
+const etaUtente = document.getElementById("etaUtente");
+etaUtente.innerHTML = `Età: ${eta}`;
+
 // Scrivere il prezzo finale con un massimo di due decimali
 const prezzoBiglietto = document.getElementById("prezzo-biglietto");
-
-prezzoBiglietto.innerHTML = `${prezzo.toFixed(2)} €`;
+prezzoBiglietto.innerHTML = `Il prezzo del tuo biglietto é: ${prezzo.toFixed(2)} €`;
